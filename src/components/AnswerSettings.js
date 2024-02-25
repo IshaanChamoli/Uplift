@@ -23,7 +23,11 @@ export default function AnswerSettings() {
         <OptionButton text="all lowercase"/>
         <OptionButton text="No Punctuation"/>
         <OptionButton text="Add :( for sad" />
-        <NextPage pageName = "Welcome"/>
+        <Pressable style={styles.NextPageBtnStyle} onPress={() => { nextPage(props.pageName); }}>
+            <Text style={styles.NextPageTextStyle}>
+                    Next Page
+                </Text>
+            </Pressable>
 
     </View>
       );
