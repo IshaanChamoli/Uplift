@@ -1,15 +1,23 @@
 import { Text, View, StyleSheet, Pressable, TextInput, Keyboard, TouchableWithoutFeedback, Platform , Alert} from 'react-native';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
-// import * as ImagePicker from 'expo-image-picker';
+import * as ImagePicker from 'expo-image-picker';
+//import { RNTesseractOcr } from 'react-native-tesseract-ocr';
+import Tesseract from 'tesseract.js';
 import React, { useState } from 'react';
-import NextPage from './NextPage';0
+import NextPage from './NextPage';
+
+
+
 
 export default function Screenshot(props) {
+    
     let [fontsLoaded] = useFonts({
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
     });
+
+    
 
     const [textInputValue, setTextInputValue] = useState('');
     const dismissKeyboard = () => {
@@ -30,6 +38,23 @@ export default function Screenshot(props) {
         // Do something with the selected image (e.g., set it to state)
         // For example, you can set it to a state variable:
         // setPickedImage(pickerResult.uri);
+        // DOINGGGGG
+
+        const worker = Tesseract.createWorker({
+            logger: m => console.log(m)
+        });
+    
+        await worker.load();
+        await worker.loadLanguage('eng');
+        await worker.initialize('eng');
+    
+        // Perform OCR on the selected image
+        const { data: { text } } = await worker.recognize(pickerResult.uri);
+        setTextInputValue(text);
+    
+        // Terminate the worker after OCR
+        await worker.terminate();
+        
     };
     
     if (!fontsLoaded) {

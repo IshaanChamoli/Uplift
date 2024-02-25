@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "npx expo start --tunnel",
+    "start": "npx expo start",
     "android": "npx expo start --android",
     "ios": "npx expo start --ios",
     "web": "npx expo start --web"
@@ -14,10 +14,12 @@
     "@ungap/structured-clone": "^1.2.0",
     "expo": "~50.0.7",
     "expo-font": "~11.10.3",
+    "expo-image-picker": "^14.7.1",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
     "react-native": "0.73.4",
-    "react-native-tesseract-ocr": "^2.0.3"
+    "react-native-tesseract-ocr": "^2.0.3",
+    "tesseract.js": "^5.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
