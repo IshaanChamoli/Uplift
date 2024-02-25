@@ -11,7 +11,6 @@ export default function Screenshot(props) {
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
     });
 
-    const [textInputValue, setTextInputValue] = useState('');
     const dismissKeyboard = () => {
         Keyboard.dismiss();
     };
@@ -54,8 +53,8 @@ export default function Screenshot(props) {
                 style={styles.TextInputStyle}
                 multiline={true}
                 numberOfLines={10}
-                value={textInputValue}
-                onChangeText={setTextInputValue}
+                value={props.screenshotValue}
+                onChangeText={props.setScreenshotValue}
                 placeholder="Enter conversation text..."
             />
             <Text>{'\n'}</Text>

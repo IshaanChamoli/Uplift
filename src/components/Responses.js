@@ -11,6 +11,22 @@ const Responses = (props) => {
 		Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
 	});
 
+	function goHome() {
+		pageName = "Welcome";
+		console.log(props.pageVisibleList);
+        pageNamesList = Object.keys(props.pageVisibleList);
+        newVisibleList = {...props.setPageVisibleList};
+        console.log("Keys: " + pageNamesList);
+        console.log(pageName);
+        for (let i = 0; i < pageNamesList.length; i++) {
+            newVisibleList[pageNamesList[i]] = false;
+            console.log(pageNamesList[i]);
+        }
+        newVisibleList[pageName] = true;
+        props.setPageVisibleList(newVisibleList);
+        console.log(newVisibleList);
+	}
+
 	if (!fontsLoaded) {
 		return null;
 	}
@@ -26,20 +42,19 @@ const Responses = (props) => {
 	  <View style={styles.chatBubble}></View>
 	  <ResponsesButton />
 
-	<Pressable onPress={{}}>
+	{/* <Pressable onPress={{}}>
 		<View style={styles.newUploadButton}>
 			<Text style={styles.newUploadText}>
 				New Upload
 			</Text>
 		</View>
-	</Pressable>
-	<Pressable onPress={{}}>
+	</Pressable> */}
+	<Pressable onPress={goHome}>
 		<View style={styles.homeButton}>
 			<Text style={styles.homeButtonText}>
 				Home 🏠
 			</Text>
 		</View>
-		{/* <View style={styles.homeButton}>New Upload</View> */}
 	</Pressable>
 	</View>
 	

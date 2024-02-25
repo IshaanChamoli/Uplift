@@ -11,7 +11,6 @@ export default function AdditionalInfo(props) {
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
     });
 
-    const [textInputValue, setTextInputValue] = useState('');
     const dismissKeyboard = () => {
         Keyboard.dismiss();
     };
@@ -32,8 +31,8 @@ export default function AdditionalInfo(props) {
                 style={styles.TextInputStyle}
                 multiline={true}
                 numberOfLines={10}
-                value={textInputValue}
-                onChangeText={setTextInputValue}
+                value={props.additionalInfoInput}
+                onChangeText={props.setAdditionalInfoInput}
                 placeholder="Enter additional information..."
             />
             <Text>{'\n'}</Text>
