@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Welcome from './src/components/Welcome';
+import { useEffect, useState } from 'react';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 
@@ -15,13 +16,6 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
-
-  useEffect(() => {
-    pageNamesList = ["Welcome", "Intermediate", "Context", "AdditionalInfo", "Intent", "Screenshot", "Responses", "AnswerSettings"];
-    for (page in pageNamesList) {
-      
-    }
-  }, [])
 
   return (
 
