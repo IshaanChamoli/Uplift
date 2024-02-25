@@ -16,11 +16,7 @@ export default function Intermediate() {
             <Text style={styles.textBoxStyle}>Sometimes, we need a little help to help others.</Text>
             <Text style={styles.textBoxStyle}>Let's start off with some info about the situation...</Text>
             <Text>{'\n\n\n\n\n\n\n'}</Text>
-            <Pressable style={styles.NextPageBtnStyle} onPress={() => { nextPage(props.pageName); }}>
-            <Text style={styles.NextPageTextStyle}>
-                    Next Page
-                </Text>
-            </Pressable>
+            <NextPage pageName = "Context"/>
         </View>
     );
 }
