@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import NextPage from './NextPage';
-import OptionButton from './OptionButton';
+import OptionButton from './ContextButton';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 

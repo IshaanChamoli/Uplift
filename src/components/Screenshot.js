@@ -79,8 +79,8 @@ export default function Screenshot(props) {
                 style={styles.TextInputStyle}
                 multiline={true}
                 numberOfLines={10}
-                value={textInputValue}
-                onChangeText={setTextInputValue}
+                value={props.screenshotValue}
+                onChangeText={props.setScreenshotValue}
                 placeholder="Enter conversation text..."
             />
             <Text>{'\n'}</Text>

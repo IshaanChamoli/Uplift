@@ -1,14 +1,17 @@
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import NextPage from './NextPage';
-import OptionButton from './OptionButton';
+import IntentButton from './IntentButton';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
+import { useState} from 'react';
 
 export default function Intent(props) {
     let [fontsLoaded] = useFonts({
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
     });
+
+    const [intentSelected, setIntentSelected] = useState([false,false,false,false,false,false]);
 
     if (!fontsLoaded) {
         return null;
@@ -20,12 +23,12 @@ export default function Intent(props) {
         <Text style={styles.Description}>
         How do you want to help your friend out?
         </Text>
-        <OptionButton text="Be a Listening Ear 👂"/>
-        <OptionButton text="Provide a Solution ✅"/>
-        <OptionButton text="Change their Mind 🧠"/>
-        <OptionButton text="Cheer them Up 🧀"/>
-        <OptionButton text="Refer them to someone 🧑‍💼"/>
-        <OptionButton text="Other 🔹"/>
+        <IntentButton text="Be a Listening Ear 👂" intentSelected ={intentSelected} index = {0} setIntentValue = {props.setIntentValue} setIntentSelected = {setIntentSelected}/>
+        <IntentButton text="Provide a Solution ✅"intentSelected ={intentSelected} index = {1} setIntentValue  = {props.setIntentValue }setIntentSelected = {setIntentSelected}/>
+        <IntentButton text="Change their Mind 🧠"intentSelected ={intentSelected} index = {2} setIntentValue  = {props.setIntentValue }setIntentSelected = {setIntentSelected}/>
+        <IntentButton text="Cheer them Up 🧀"intentSelected ={intentSelected} index = {3} setIntentValue  = {props.setIntentValue }setIntentSelected = {setIntentSelected}/>
+        <IntentButton text="Refer them to someone 🧑‍💼"intentSelected ={intentSelected} index = {4} setIntentValue  = {props.setIntentValue }setIntentSelected = {setIntentSelected}/>
+        <IntentButton text="Other 🔹"intentSelected ={intentSelected} index = {5} setIntentValue  = {props.setIntentValue }setIntentSelected = {setIntentSelected}/>
         <NextPage pageName="Screenshot" pageVisibleList={props.pageVisibleList}  setPageVisibleList={props.setPageVisibleList}/>
 
     </View>

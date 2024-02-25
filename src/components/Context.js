@@ -1,14 +1,17 @@
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import NextPage from './NextPage';
-import OptionButton from './OptionButton';
+import ContextButton from './ContextButton';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
+import { useState } from 'react';
 
 export default function Context(props) {
     let [fontsLoaded] = useFonts({
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
     });
+
+    const [constSelected, setConstSelected] = useState([false,false,false,false,false]);
 
     if (!fontsLoaded) {
         return null;
@@ -20,12 +23,12 @@ export default function Context(props) {
         <Text style={styles.Description}>
         What are you helping your friend out with today?
         </Text>
-        <OptionButton text="Feeling sad 😢"/>
-        <OptionButton text="Friend/Family/🩷 Drama"/>
-        <OptionButton text="Grief/Loss 😔"/>
-        <OptionButton text="Breakup 💔"/>
-        <OptionButton text="Other 🔹"/>
-        <NextPage pageName="AdditionalInfo" pageVisibleList={props.pageVisibleList}  setPageVisibleList={props.setPageVisibleList}/>
+        <ContextButton text="Feeling sad 😢" constSelected={constSelected} setConstSelected={setConstSelected} index={0} setContextValue={props.setContextValue}/>
+        <ContextButton text="Friend/Family/🩷 Drama" constSelected={constSelected} setConstSelected={setConstSelected} index={1} setContextValue={props.setContextValue}/>
+        <ContextButton text="Grief/Loss 😔" constSelected={constSelected} setConstSelected={setConstSelected} index={2} setContextValue={props.setContextValue}/>
+        <ContextButton text="Breakup 💔" constSelected={constSelected} setConstSelected={setConstSelected} index={3} setContextValue={props.setContextValue}/>
+        <ContextButton text="Other 🔹" constSelected={constSelected} setConstSelected={setConstSelected} index={4} setContextValue={props.setContextValue}/>
+        <NextPage pageName="AdditionalInfo" pageVisibleList={props.pageVisibleList} setPageVisibleList={props.setPageVisibleList}/>
 
     </View>
       );
