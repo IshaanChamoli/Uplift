@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, Pressable, TextInput, Keyboard, TouchableWithoutFeedback, Platform , Alert} from 'react-native';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
-// import * as ImagePicker from 'expo-image-picker';
+import * as ImagePicker from 'expo-image-picker';
 import React, { useState } from 'react';
 import NextPage from './NextPage';0
 
