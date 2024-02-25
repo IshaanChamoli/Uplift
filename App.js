@@ -21,6 +21,9 @@ export default function App() {
   const [pageVisibleList, setPageVisibleList] = useState({"Welcome": true, "Intermediate": false, "Context": false, "AdditionalInfo": false, "Intent": false, "Screenshot": false, "Responses": false, "AnswerSettings": false});
   const [additionalInfoInput, setAdditionalInfoInput] = useState('');
   const [screenshotValue, setScreenshotValue] = useState('');
+  const [contextValue, setContextValue] = useState('');
+  const [intentValue, setIntentValue] = useState('');
+
 
 // ["Welcome", "Intermediate", "Context", "AdditionalInfo", "Intent", "Screenshot", "Responses", "AnswerSettings"]
   if (!fontsLoaded) {
@@ -33,9 +36,9 @@ export default function App() {
       { console.log("Rerendering: " + screenshotValue)}
       {pageVisibleList["Welcome"] && <Welcome pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
       {pageVisibleList["Intermediate"] && <Intermediate pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
-      {pageVisibleList["Context"] && <Context pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["Context"] && <Context contextValue = {contextValue} setContextValue = {setContextValue} pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
       {pageVisibleList["AdditionalInfo"] && <AdditionalInfo additionalInfoInput={additionalInfoInput} setAdditionalInfoInput={setAdditionalInfoInput} pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
-      {pageVisibleList["Intent"] && <Intent pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["Intent"] && <Intent intentValue = {intentValue} setIntentValue = {setIntentValue} pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
       {pageVisibleList["Screenshot"] && <Screenshot screenshotValue = {screenshotValue} setScreenshotValue = {setScreenshotValue} pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
       {pageVisibleList["Responses"] && <Responses pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
       {pageVisibleList["AnswerSettings"] && <AnswerSettings pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
