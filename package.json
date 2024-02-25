@@ -12,7 +12,6 @@
     "@expo-google-fonts/fredoka-one": "^0.2.3",
     "@expo-google-fonts/leckerli-one": "^0.2.3",
     "expo": "~50.0.7",
-    "expo-cli": "^6.3.10",
     "expo-font": "~11.10.3",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",

@@ -10,14 +10,23 @@ export default function App() {
     Fredoka: require('./assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
   });
 
+  const [activePage, setActivePage] = useState("Welcome.js")
+
   if (!fontsLoaded) {
     return null;
   }
 
+  useEffect(() => {
+    pageNamesList = ["Welcome", "Intermediate", "Context", "AdditionalInfo", "Intent", "Screenshot", "Responses", "AnswerSettings"];
+    for (page in pageNamesList) {
+      
+    }
+  }, [])
+
   return (
 
     <View style={styles.container}>
-      <Welcome />
+      <Welcome changePage={setActivePage}/>
     </View>
   );
 }

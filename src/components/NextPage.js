@@ -24,6 +24,11 @@ export default function NextPage(props) {
     )
 }
 
+function nextPage(pageName) {
+    setActivePage(pageName);
+    pageNamesList = ["Welcome", "Intermediate", "Context", "AdditionalInfo", "Intent", "Screenshot", "Responses", "AnswerSettings"]
+}
+
 const styles = StyleSheet.create({
     NextPageBtnStyle: {
         backgroundColor: '#eef5db',
