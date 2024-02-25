@@ -1,9 +1,9 @@
 import { Text, View, StyleSheet, Pressable, TextInput, Keyboard, TouchableWithoutFeedback, Platform , Alert} from 'react-native';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
-import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
-import * as ImagePicker from 'expo-image-picker';
 import React, { useState } from 'react';
 import NextPage from './NextPage';0
+import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
+
 
 export default function Welcome() {
     let [fontsLoaded] = useFonts({
@@ -19,44 +19,23 @@ export default function Welcome() {
     const dismissKeyboard = () => {
         Keyboard.dismiss();
     };
-    const pickImage = async () => {
-        const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
-        if (permissionResult.granted === false) {
-            Alert.alert('Permission to access camera roll is required!');
-            return;
-        }
     
-        const pickerResult = await ImagePicker.launchImageLibraryAsync();
-        if (pickerResult.cancelled === true) {
-            return;
-        }
-    
-        // Do something with the selected image (e.g., set it to state)
-        // For example, you can set it to a state variable:
-        // setPickedImage(pickerResult.uri);
-    };
     
     return (
         <TouchableWithoutFeedback onPress={dismissKeyboard}>
         <View>
             <Text>{''}</Text>
-            <Text style={styles.WelcomeText}>Enter Conversation</Text>
-            <Text style={styles.DescribeText}>Upload a screenshot or enter the text of your conversation in script form. </Text>
+            <Text style={styles.WelcomeText}>Additional Information</Text>
+            <Text style={styles.DescribeText}>Give us some extra details so we can personalize your answer {'\n'}(especially if you selected 'other' on the previous page)</Text>
             <Text>{'\n'}</Text>
-            <Pressable style={styles.UploadBtnStyle} onPress={pickImage}>
-                <Text style={styles.UploadTextStyle}>
-                    Upload ⬆️
-                </Text>
-            </Pressable>
-            <Text style={styles.DescribeText}>{'\n'}OR</Text>
-            {/* <Text>{'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'}</Text> */}
+    
             <TextInput
                 style={styles.TextInputStyle}
                 multiline={true}
                 numberOfLines={10}
                 value={textInputValue}
                 onChangeText={setTextInputValue}
-                placeholder="Enter conversation text..."
+                placeholder="Enter additional information..."
             />
             <Text>{'\n'}</Text>
             <Pressable style={styles.NextPageBtnStyle} onPress={() => { nextPage(props.pageName); }}>
@@ -74,7 +53,7 @@ export default function Welcome() {
 const styles = StyleSheet.create({
     WelcomeText: {
         fontFamily: "Fredoka",
-        fontSize: 40,
+        fontSize: 35,
         alignSelf: 'center',
         color:'#1b3c42',
         marginTop: -199,
@@ -89,7 +68,7 @@ const styles = StyleSheet.create({
     },
     DescribeText: {
         fontFamily: "Fredoka",
-        fontSize: 20,
+        fontSize: 15,
         alignSelf: 'center',
         color:'#1b3c42',
         textAlign: 'center'
