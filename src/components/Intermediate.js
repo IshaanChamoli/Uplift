@@ -18,7 +18,7 @@ export default function Intermediate() {
             <Text>{'\n\n\n\n\n\n\n'}</Text>
             <Pressable style={styles.NextPageBtnStyle} onPress={() => { nextPage(props.pageName); }}>
             <Text style={styles.NextPageTextStyle}>
-                    Back
+                    Next Page
                 </Text>
             </Pressable>
         </View>
