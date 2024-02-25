@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import NextPage from './NextPage';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
@@ -17,7 +17,7 @@ export default function Welcome() {
         <View>
             <Text style={styles.WelcomeText}>Welcome to</Text>
             <Text style={styles.AppNameText}>Uplift</Text>
-            <Text>{'\n\n\n\n\n\n\n'}</Text>
+            <Image style={styles.HandHeartImage} source={require('../../assets/Hand_heart.png')} />
             <NextPage pageName="intermediate" />
         </View>
     );
@@ -26,13 +26,17 @@ export default function Welcome() {
 const styles = StyleSheet.create({
     WelcomeText: {
         fontFamily: "Fredoka",
-        fontSize: 30,
+        fontSize: 40,
         alignSelf: 'center',
         color: '#1b3c42',
     },
+    HandHeartImage: {
+        alignSelf: 'center',
+        margin: 70,
+    },
     AppNameText: {
         fontFamily: "LeckerliOne_400Regular",
-        fontSize: 80,
+        fontSize: 100,
         alignSelf: 'center',
         color: '#fe5f55',
         fontWeight: 'bold'
