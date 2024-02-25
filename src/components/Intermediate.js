@@ -3,11 +3,14 @@ import { useFonts } from 'expo-font';
 import NextPage from './NextPage';
 
 export default function Intermediate() {
-    const [fontsLoaded] = useFonts({
-        'Fredoka': require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
-        'LeckerLi': require('../../assets/fonts/LeckerliOne-Regular.ttf'),
-      });
-    
+    let [fontsLoaded] = useFonts({
+        LeckerliOne_400Regular,
+        Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
+    });
+
+    if (!fontsLoaded) {
+        return null;
+    }
     return (
         <View>
             <Text style={styles.textBoxStyle}>Sometimes, we need a little help to help others.</Text>

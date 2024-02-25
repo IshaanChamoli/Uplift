@@ -3,9 +3,14 @@ import { useFonts } from 'expo-font';
 
 
 export default function NextPage(props) {
-    const [fontsLoaded] = useFonts({
-        'Fredoka': require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
-      });
+    let [fontsLoaded] = useFonts({
+        LeckerliOne_400Regular,
+        Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
+    });
+
+    if (!fontsLoaded) {
+        return null;
+    }
 
     return (
         <View>

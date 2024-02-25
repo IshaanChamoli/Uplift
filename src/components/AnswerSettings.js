@@ -5,10 +5,14 @@ import OptionButton from './OptionButton';
 
 
 export default function AnswerSettings() {
-    const [fontsLoaded] = useFonts({
-        'Fredoka': require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
-        'LeckerLi': require('../../assets/fonts/LeckerliOne-Regular.ttf'),
-      });
+    let [fontsLoaded] = useFonts({
+        LeckerliOne_400Regular,
+        Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
+    });
+
+    if (!fontsLoaded) {
+        return null;
+    }
       return (
     <View>
         <Text style={styles.FrameTitle}>
