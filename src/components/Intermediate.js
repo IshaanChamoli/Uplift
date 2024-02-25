@@ -1,8 +1,9 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { useFonts } from 'expo-font';
 import NextPage from './NextPage';
+import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
+import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 
-export default function Intermediate() {
+export default function Intermediate(props) {
     let [fontsLoaded] = useFonts({
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
@@ -16,11 +17,7 @@ export default function Intermediate() {
             <Text style={styles.textBoxStyle}>Sometimes, we need a little help to help others.</Text>
             <Text style={styles.textBoxStyle}>Let's start off with some info about the situation...</Text>
             <Text>{'\n\n\n\n\n\n\n'}</Text>
-            <Pressable style={styles.NextPageBtnStyle} onPress={() => { nextPage(props.pageName); }}>
-            <Text style={styles.NextPageTextStyle}>
-                    Back
-                </Text>
-            </Pressable>
+            <NextPage pageName="Context" pageVisibleList={props.pageVisibleList}  setPageVisibleList={props.setPageVisibleList}/>
         </View>
     );
 }

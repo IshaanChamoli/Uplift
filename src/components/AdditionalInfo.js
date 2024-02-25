@@ -5,22 +5,21 @@ import NextPage from './NextPage';0
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 
 
-export default function Welcome() {
+export default function AdditionalInfo(props) {
     let [fontsLoaded] = useFonts({
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
     });
 
-
-    if (!fontsLoaded) {
-        return null;
-    }
     const [textInputValue, setTextInputValue] = useState('');
     const dismissKeyboard = () => {
         Keyboard.dismiss();
     };
     
-    
+    if (!fontsLoaded) {
+        return null;
+    }
+
     return (
         <TouchableWithoutFeedback onPress={dismissKeyboard}>
         <View>
@@ -38,13 +37,7 @@ export default function Welcome() {
                 placeholder="Enter additional information..."
             />
             <Text>{'\n'}</Text>
-            <Pressable style={styles.NextPageBtnStyle} onPress={() => { nextPage(props.pageName); }}>
-                <Text style={styles.NextPageTextStyle}>
-                    Next
-                </Text>
-            </Pressable>
-            
-            {/* <NextPage pageName="intermediate"/> */}
+            <NextPage pageName="Intent" pageVisibleList={props.pageVisibleList}  setPageVisibleList={props.setPageVisibleList}/>
         </View>
         </TouchableWithoutFeedback>
     );

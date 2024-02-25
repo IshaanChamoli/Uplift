@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Pressable, TouchableWithoutFeedbackComponent } from 'react-native';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 
@@ -7,6 +7,21 @@ export default function NextPage(props) {
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
     });
+
+    function nextPage(pageName) {
+        console.log(props.pageVisibleList);
+        pageNamesList = Object.keys(props.pageVisibleList);
+        newVisibleList = {...props.setPageVisibleList};
+        console.log("Keys: " + pageNamesList);
+        console.log(pageName);
+        for (let i = 0; i < pageNamesList.length; i++) {
+            newVisibleList[pageNamesList[i]] = false;
+            console.log(pageNamesList[i]);
+        }
+        newVisibleList[pageName] = true;
+        props.setPageVisibleList(newVisibleList);
+        console.log(newVisibleList);
+    }
 
 
     if (!fontsLoaded) {
@@ -22,11 +37,6 @@ export default function NextPage(props) {
             </Pressable>
         </View>
     )
-}
-
-function nextPage(pageName) {
-    setActivePage(pageName);
-    pageNamesList = ["Welcome", "Intermediate", "Context", "AdditionalInfo", "Intent", "Screenshot", "Responses", "AnswerSettings"]
 }
 
 const styles = StyleSheet.create({

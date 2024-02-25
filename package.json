@@ -11,14 +11,17 @@
   "dependencies": {
     "@expo-google-fonts/fredoka-one": "^0.2.3",
     "@expo-google-fonts/leckerli-one": "^0.2.3",
+    "@ungap/structured-clone": "^1.2.0",
     "expo": "~50.0.7",
     "expo-font": "~11.10.3",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
-    "react-native": "0.73.4"
+    "react-native": "0.73.4",
+    "react-native-tesseract-ocr": "^2.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@types/ungap__structured-clone": "^1.2.0"
   },
   "private": true
 }

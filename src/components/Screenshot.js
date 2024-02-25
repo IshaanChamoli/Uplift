@@ -1,20 +1,16 @@
 import { Text, View, StyleSheet, Pressable, TextInput, Keyboard, TouchableWithoutFeedback, Platform , Alert} from 'react-native';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
-import * as ImagePicker from 'expo-image-picker';
+// import * as ImagePicker from 'expo-image-picker';
 import React, { useState } from 'react';
 import NextPage from './NextPage';0
 
-export default function Welcome() {
+export default function Screenshot(props) {
     let [fontsLoaded] = useFonts({
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
     });
 
-
-    if (!fontsLoaded) {
-        return null;
-    }
     const [textInputValue, setTextInputValue] = useState('');
     const dismissKeyboard = () => {
         Keyboard.dismiss();
@@ -36,6 +32,10 @@ export default function Welcome() {
         // setPickedImage(pickerResult.uri);
     };
     
+    if (!fontsLoaded) {
+        return null;
+    }
+
     return (
         <TouchableWithoutFeedback onPress={dismissKeyboard}>
         <View>
@@ -59,13 +59,7 @@ export default function Welcome() {
                 placeholder="Enter conversation text..."
             />
             <Text>{'\n'}</Text>
-            <Pressable style={styles.NextPageBtnStyle} onPress={() => { nextPage(props.pageName); }}>
-                <Text style={styles.NextPageTextStyle}>
-                    Next
-                </Text>
-            </Pressable>
-            
-            {/* <NextPage pageName="intermediate"/> */}
+            <NextPage pageName="Responses" pageVisibleList={props.pageVisibleList}  setPageVisibleList={props.setPageVisibleList}/>
         </View>
         </TouchableWithoutFeedback>
     );

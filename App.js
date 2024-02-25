@@ -1,6 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Welcome from './src/components/Welcome';
+import Intermediate from './src/components/Intermediate';
+import Context from './src/components/Context';
+import AdditionalInfo from './src/components/AdditionalInfo';
+import Intent from './src/components/Intent';
+import Screenshot from './src/components/Screenshot';
+import Responses from './src/components/Responses';
+import AnswerSettings from './src/components/AnswerSettings';
 import { useEffect, useState } from 'react';
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
@@ -11,16 +18,25 @@ export default function App() {
     Fredoka: require('./assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
   });
 
-  const [activePage, setActivePage] = useState("Welcome.js")
-
+  const [pageVisibleList, setPageVisibleList] = useState({"Welcome": true, "Intermediate": false, "Context": false, "AdditionalInfo": false, "Intent": false, "Screenshot": false, "Responses": false, "AnswerSettings": false});
+// ["Welcome", "Intermediate", "Context", "AdditionalInfo", "Intent", "Screenshot", "Responses", "AnswerSettings"]
   if (!fontsLoaded) {
     return null;
   }
 
-  return (
 
+  return (
     <View style={styles.container}>
-      <Welcome changePage={setActivePage}/>
+      { console.log("Rerendering: " + pageVisibleList)}
+      {pageVisibleList["Welcome"] && <Welcome pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["Intermediate"] && <Intermediate pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["Context"] && <Context pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["AdditionalInfo"] && <AdditionalInfo pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["Intent"] && <Intent pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["Screenshot"] && <Screenshot pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["Responses"] && <Responses pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+      {pageVisibleList["AnswerSettings"] && <AnswerSettings pageVisibleList={pageVisibleList} setPageVisibleList={setPageVisibleList}/>}
+
     </View>
   );
 }

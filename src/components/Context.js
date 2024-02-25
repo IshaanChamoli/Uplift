@@ -1,10 +1,10 @@
 import { Text, View, StyleSheet, Pressable } from 'react-native';
-import { useFonts } from 'expo-font';
 import NextPage from './NextPage';
 import OptionButton from './OptionButton';
+import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
+import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 
-
-export default function Context() {
+export default function Context(props) {
     let [fontsLoaded] = useFonts({
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
@@ -25,7 +25,7 @@ export default function Context() {
         <OptionButton text="Grief/Loss 😔"/>
         <OptionButton text="Breakup 💔"/>
         <OptionButton text="Other 🔹"/>
-        <NextPage pageName = "additional info"/>
+        <NextPage pageName="AdditionalInfo" pageVisibleList={props.pageVisibleList}  setPageVisibleList={props.setPageVisibleList}/>
 
     </View>
       );

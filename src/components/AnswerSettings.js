@@ -1,10 +1,10 @@
 import { Text, View, StyleSheet, Pressable } from 'react-native';
-import { useFonts } from 'expo-font';
 import NextPage from './NextPage';
 import OptionButton from './OptionButton';
+import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
+import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 
-
-export default function AnswerSettings() {
+export default function AnswerSettings(props) {
     let [fontsLoaded] = useFonts({
         LeckerliOne_400Regular,
         Fredoka: require('../../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf'),
@@ -23,7 +23,7 @@ export default function AnswerSettings() {
         <OptionButton text="all lowercase"/>
         <OptionButton text="No Punctuation"/>
         <OptionButton text="Add :( for sad" />
-        <NextPage pageName = "Welcome"/>
+        <NextPage pageName="Welcome" pageVisibleList={props.pageVisibleList} setPageVisibleList={props.setPageVisibleList}/>
 
     </View>
       );

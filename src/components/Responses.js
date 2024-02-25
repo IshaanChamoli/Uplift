@@ -4,7 +4,7 @@ import React from 'react'
 import { useFonts, LeckerliOne_400Regular } from '@expo-google-fonts/leckerli-one'
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one'
 
-const Responses = () => {
+const Responses = (props) => {
 
 	let [fontsLoaded] = useFonts({
 		LeckerliOne_400Regular,

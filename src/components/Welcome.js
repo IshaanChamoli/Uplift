@@ -18,7 +18,7 @@ export default function Welcome(props) {
             <Text style={styles.WelcomeText}>Welcome to</Text>
             <Text style={styles.AppNameText}>Uplift</Text>
             <Image style={styles.HandHeartImage} source={require('../../assets/Hand_heart.png')} />
-            <NextPage pageName="intermediate" />
+            <NextPage pageName="Intermediate" pageVisibleList={props.pageVisibleList}  setPageVisibleList={props.setPageVisibleList}/>
         </View>
     );
 }
