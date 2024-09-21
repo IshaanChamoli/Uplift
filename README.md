@@ -1,4 +1,10 @@
-# Uplift
+# Uplift AI
+
+<img width="1487" alt="Screenshot 2024-09-21 at 5 10 56 PM" src="https://github.com/user-attachments/assets/a8989646-0c5b-4565-99b4-a658fd259242">
+<img width="1478" alt="Screenshot 2024-09-21 at 5 11 37 PM" src="https://github.com/user-attachments/assets/6cb9cf92-e9e8-4849-b6df-bff6aeef536d">
+
+
+
 
 # Inspiration
 A new viral trend on social media short videos is recordings of text messages aided by an app to "pick someone up" or flirt with them. Our group found this concept to be interesting, but more useful and applicable in a different context: helping our friends when they are going through a challenging time. We all have faced situations where we had to be there for a friend but were unsure about what exactly to say. How can we support our friends no matter what? This inspired us to create an app that helps with exactly that.
