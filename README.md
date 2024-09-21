@@ -1,7 +1,7 @@
 # Uplift AI
 
-<img width="100" alt="Screenshot 2024-09-21 at 5 10 56 PM" src="https://github.com/user-attachments/assets/a8989646-0c5b-4565-99b4-a658fd259242">
-<img width="100" alt="Screenshot 2024-09-21 at 5 11 37 PM" src="https://github.com/user-attachments/assets/6cb9cf92-e9e8-4849-b6df-bff6aeef536d">
+<img width="200" alt="Screenshot 2024-09-21 at 5 10 56 PM" src="https://github.com/user-attachments/assets/a8989646-0c5b-4565-99b4-a658fd259242">
+<img width="200" alt="Screenshot 2024-09-21 at 5 11 37 PM" src="https://github.com/user-attachments/assets/6cb9cf92-e9e8-4849-b6df-bff6aeef536d">
 
 
 
