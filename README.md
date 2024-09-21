@@ -1,11 +1,11 @@
 # Uplift AI
 
-<img width="100" alt="Screenshot 2024-09-21 at 5 10 56 PM" src="https://github.com/user-attachments/assets/7ab2c343-0644-4112-a3f4-4036abd652d2">
-<img width="100" alt="Screenshot 2024-09-21 at 5 14 01 PM" src="https://github.com/user-attachments/assets/17ca8a81-bda5-42fb-952c-36aa0853d098">
-<img width="100" alt="Screenshot 2024-09-21 at 5 14 17 PM" src="https://github.com/user-attachments/assets/cf1794c0-a6b9-42ec-ade8-5aab3e8a3611">
-<img width="100" alt="Screenshot 2024-09-21 at 5 14 36 PM" src="https://github.com/user-attachments/assets/3710bcfd-6071-4f8d-8c84-5e46df594118">
-<img width="100" alt="Screenshot 2024-09-21 at 5 14 28 PM" src="https://github.com/user-attachments/assets/e04b46ee-f5fc-4165-9d14-500196ff29a8">
-<img width="100" alt="Screenshot 2024-09-21 at 5 11 37 PM" src="https://github.com/user-attachments/assets/90e061de-5c34-4c7f-9f0e-265be4a7c942">
+<img width="200" alt="Screenshot 2024-09-21 at 5 10 56 PM" src="https://github.com/user-attachments/assets/7ab2c343-0644-4112-a3f4-4036abd652d2">
+<img width="200" alt="Screenshot 2024-09-21 at 5 14 01 PM" src="https://github.com/user-attachments/assets/17ca8a81-bda5-42fb-952c-36aa0853d098">
+<img width="200" alt="Screenshot 2024-09-21 at 5 14 17 PM" src="https://github.com/user-attachments/assets/cf1794c0-a6b9-42ec-ade8-5aab3e8a3611">
+<img width="200" alt="Screenshot 2024-09-21 at 5 14 36 PM" src="https://github.com/user-attachments/assets/3710bcfd-6071-4f8d-8c84-5e46df594118">
+<img width="200" alt="Screenshot 2024-09-21 at 5 14 28 PM" src="https://github.com/user-attachments/assets/e04b46ee-f5fc-4165-9d14-500196ff29a8">
+<img width="200" alt="Screenshot 2024-09-21 at 5 11 37 PM" src="https://github.com/user-attachments/assets/90e061de-5c34-4c7f-9f0e-265be4a7c942">
 
 
 # Inspiration
